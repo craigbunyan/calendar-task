@@ -1,0 +1,6 @@
+{
+  "meeting_name": {"type": "string", "required": false},
+  "date": {"type": "string", "regex": "[0-2]\\d{3}-[0-1]\\d-[0-3]\\d", "required": false},
+  "start_time": {"type": "string", "regex": "[0-2]\\d:[0-5]\\d", "required": false},
+  "duration": {"type": "integer", "min": 0, "max": 1440, "required": false}
+}

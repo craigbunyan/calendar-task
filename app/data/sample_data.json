@@ -1,0 +1,10 @@
+[{"meeting_name": "meet5", "date": "2021-01-01", "start_time": "15:13", "duration": 60},
+ {"meeting_name": "meet1", "date": "2021-01-01", "start_time": "09:00", "duration": 60},
+ {"meeting_name": "meet10", "date": "2021-01-02", "start_time": "15:13", "duration": 60},
+ {"meeting_name": "meet3", "date": "2021-01-01", "start_time": "14:00", "duration": 30},
+ {"meeting_name": "meet4", "date": "2021-01-01", "start_time": "14:30", "duration": 90},
+ {"meeting_name": "meet2", "date": "2021-01-01", "start_time": "09:30", "duration": 60},
+ {"meeting_name": "meet9", "date": "2021-01-02", "start_time": "14:30", "duration": 90},
+ {"meeting_name": "meet6", "date": "2021-01-02", "start_time": "09:00", "duration": 60},
+ {"meeting_name": "meet8", "date": "2021-01-02", "start_time": "14:00", "duration": 30},
+ {"meeting_name": "meet7", "date": "2021-01-02", "start_time": "09:30", "duration": 60}]

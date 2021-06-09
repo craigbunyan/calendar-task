@@ -12,7 +12,7 @@ class CalendarValidator:
         """
         Validates a record against the given schema.
         Returns none and raises RuntimeError for invalid records.
-        :param record:
+        :param record: dict
         :return: None
         """
         if not self.validator.validate(record):

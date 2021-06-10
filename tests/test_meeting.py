@@ -47,7 +47,7 @@ class TestMeeting(TestCase):
         ordered_meetings = Meeting.order_meeting_list(self.meetings)
         clashes = Meeting.get_clashes(ordered_meetings)
 
-        expected_clashes = ['test2']
+        expected_clashes = [('test1', 'test2')]
 
         self.assertListEqual(expected_clashes, clashes)
 

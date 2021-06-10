@@ -45,10 +45,10 @@ class Meeting:
         :return: list
         """
         clashes = []
-        end_to_compare = datetime.min
+        previous_meeting_end = datetime.min
         for meeting in meet_list:
-            start_to_compare = meeting.start
-            if start_to_compare < end_to_compare:
-                clashes.append(meeting.name)
-            end_to_compare = meeting.end
+            if meeting.start < previous_meeting_end:
+                clashes.append((previous_meeting_name, meeting.name))
+            previous_meeting_end = meeting.end
+            previous_meeting_name = meeting.name
         return clashes

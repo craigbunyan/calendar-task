@@ -1,5 +1,6 @@
-from datetime import datetime, timedelta
+import logging
 import itertools
+from datetime import datetime, timedelta
 
 
 class Meeting:
@@ -14,6 +15,7 @@ class Meeting:
         self.duration = cal_record.get('duration')
         self.start = self.date + timedelta(hours=self.start_time.hour, minutes=self.start_time.minute)
         self.end = self.start + timedelta(minutes=self.duration)
+        self.logger = logging.getLogger(__name__)
 
     @classmethod
     def order_meeting_list(cls, meet_list: list) -> list:
@@ -48,7 +50,9 @@ class Meeting:
         previous_meeting_end = datetime.min
         for meeting in meet_list:
             if meeting.start < previous_meeting_end:
-                clashes.append((previous_meeting_name, meeting.name))
+                clash = (previous_meeting_name, meeting.name)
+                clashes.append(clash)
+                meeting.logger.info("Clash detected for: %s", clash)
             previous_meeting_end = meeting.end
             previous_meeting_name = meeting.name
         return clashes
